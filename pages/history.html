@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="quiz-container">
+        <div class="question-number">
+            <h3>Question <span class="question-num-value"></span> of
+                <span class="total-questions"></span>
+                <!-- <span class="Timer">Time Left:</span> -->
+                <span class="DisplayTime">10</span>
+        </div>
+        </h3>
+        <div class="question">
+        </div>
+        <div class="options">
+            <div id="0" class="option1" onclick="check(this)"></div>
+            <div id="1" class="option2" onclick="check(this)"></div>
+            <div id="2" class="option3" onclick="check(this)"></div>
+            <div id="3" class="option4" onclick="check(this)"></div>
+        </div>
+        <div class="button btn">
+            <button type="button" onclick="check()" class="btn">Next</button>
+        </div>
+        <div class="answers-tracker">
+        </div>
+    </div>
+    <div class="quiz-over">
+        <div class="box hide">
+            <div class="Pass">
+                <h1>Good Job! <br /><span class="percentage"></span> is actually impressive <br>Now go change the world and make history
+                </h1>
+                <button type="button" onclick="tryAgain()">Start Over</button>
+                <button type="button" class="quizoverbtn" onclick="home()">Home</button>
+            </div>
+        </div>
+        <div class="boxed hide">
+            <div class="Fail">
+                <h1>Don't worry, you can always try again... or just stick to living in the present :)<br>
+                    <span class="percentage"></span>
+                </h1>
+                <button type="button" class="quizoverbtn" onclick="tryAgain()">Try Again</button>
+                <button type="button" class="quizoverbtn" onclick="home()">Home</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../controllers/script_h.js"></script>
+
+</html>
